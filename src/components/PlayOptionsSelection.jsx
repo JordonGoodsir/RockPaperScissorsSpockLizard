@@ -1,16 +1,8 @@
 import PlayOption from "./PlayOption"
 
-const options = [
-  'rock',
-  'paper',
-  'scissors',
-  'lizard',
-  'spock'
-]
-
-function PlayOptionsVisual() {
+function PlayOptionsSelection() {
   return (
-    <div className="flex flex-col w-fit relative w-[200px] xl-1/2:w-[350px]">
+    <div className="flex flex-col relative w-[200px] xl-1/2:w-[350px]">
       <img src="../../public/images/pentagon.svg" />
       <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2"><PlayOption option="scissors" /></div>
       <div className="absolute top-[20%] right-0 translate-x-1/2"><PlayOption option="paper" /></div>
@@ -21,4 +13,4 @@ function PlayOptionsVisual() {
   )
 }
 
-export default PlayOptionsVisual
+export default PlayOptionsSelection

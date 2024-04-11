@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import ScoreBoard from './components/templates/ScoreBoard'
 import PlayOption from './components/PlayOption'
-import PlayOptionsVisual from './components/PlayOptionsVisual'
+import PlayOptionsVisual from './components/PlayOptionsSelection'
 
 function App() {
   const [count, setCount] = useState(0)
