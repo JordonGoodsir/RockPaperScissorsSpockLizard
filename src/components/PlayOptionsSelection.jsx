@@ -2,7 +2,7 @@ import PlayOption from "./PlayOption"
 
 function PlayOptionsSelection() {
   return (
-    <div className="flex flex-col relative w-[200px] xl-1/2:w-[350px]">
+    <div className="flex flex-col relative w-[200px] lg:w-[350px]">
       <img src="../../public/images/pentagon.svg" />
       <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2"><PlayOption option="scissors" /></div>
       <div className="absolute top-[20%] right-0 translate-x-1/2"><PlayOption option="paper" /></div>

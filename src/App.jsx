@@ -9,7 +9,7 @@ function App() {
   return (
     <main className="h-screen w-screen overflow-hidden flex items-center justify-center bg-RadialGradient p-8">
 
-      <div className='flex flex-col max-w-xl-1/2 w-full overflow-hidden justify-center h-full items-center pb-96'>
+      <div className='flex flex-col max-w-screen-lg w-full overflow-hidden justify-center h-full items-center pb-96'>
         <ScoreBoard />
         {/* <PlayOption option="scissors"/>/ */}
         <PlayOptionsVisual />
