@@ -9,7 +9,7 @@ function OptionsList() {
 
     return (
       <div className="text-white flex flex-col font-medium text-lg leading-4 lg:text-3xl lg:leading-6 justify-center">
-        {options.map((option) => <p>{option}</p>)}
+        {options.map((option) => <p key={`${option}_vertical_list`}>{option}</p>)}
       </div>
     )
   }

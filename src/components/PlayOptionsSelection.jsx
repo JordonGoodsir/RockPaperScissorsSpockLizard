@@ -8,13 +8,13 @@ const optionStyles = {
   lizard: 'absolute bottom-0 left-0 translate-y-1/2'
 }
 
-function PlayOptionsSelection() {
+function PlayOptionsSelection({ select }) {
   return (
     <div className="flex flex-col relative w-[200px] lg:w-[350px]">
       <img src="../../public/images/pentagon.svg" />
       {Object.keys(optionStyles).map((option) => {
         return (
-          <div className={optionStyles[option]}><PlayOption option={option} /></div>
+          <div onClick={() => select(option)} className={optionStyles[option]} key={`${option}_selector`}><PlayOption option={option} /></div>
         )
       })}
     </div>
