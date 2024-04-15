@@ -6,7 +6,7 @@ function Button({ text, type = "primary", clicked = () => { } }) {
     }
 
     return (
-        <button onClick={() => clicked()} className={'tracking-widest min-h-[45px] h-[45px] text-lg font-semibold rounded-lg border-white border px-10 w-full ' + types[type]} >
+        <button onClick={() => clicked()} className={'cursor-pointer tracking-widest min-h-[45px] h-[45px] text-lg font-semibold rounded-lg border-white border px-10 w-full ' + types[type]} >
             {text}
         </button>
     )

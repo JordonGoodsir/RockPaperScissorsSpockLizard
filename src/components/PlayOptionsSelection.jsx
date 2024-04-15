@@ -14,7 +14,7 @@ function PlayOptionsSelection({ select }) {
       <img src="../../public/images/pentagon.svg" />
       {Object.keys(optionStyles).map((option) => {
         return (
-          <div onClick={() => select(option)} className={optionStyles[option]} key={`${option}_selector`}><PlayOption option={option} /></div>
+          <div onClick={() => select(option)} className={'cursor-pointer ' + optionStyles[option]} key={`${option}_selector`}><PlayOption option={option} /></div>
         )
       })}
     </div>
