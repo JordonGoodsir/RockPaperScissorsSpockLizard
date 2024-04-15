@@ -13,10 +13,14 @@ function App() {
         <div className='basis-auto w-full'><ScoreBoard /></div>
 
         <div className="basis-auto w-full grow-1 shrink-1 overflow-hidden h-full flex items-center justify-center">
-        <PlayingField />
+          <PlayingField />
         </div>
 
-        <div className='basis-auto'><Button text="RULES" type="secondary"/></div>
+        <div className='basis-auto flex justify-center lg:justify-end w-full'>
+          <div className="w-fit">
+            <Button text="RULES" type="secondary" />
+          </div>
+        </div>
 
       </div>
     </main>

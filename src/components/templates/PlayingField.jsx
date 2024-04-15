@@ -27,14 +27,12 @@ function PlayingField() {
             setOutcome('WIN')
 
             const currentScore = localStorage.getItem('score')
-            console.error(currentScore)
-            
-            if(currentScore) { 
+
+            if (currentScore) {
                 localStorage.setItem('score', Number(currentScore) + 1)
-            } else { 
+            } else {
                 localStorage.setItem('score', '1')
             }
-            // plus score
         } else {
             setOutcome('LOSE')
         }
