@@ -1,11 +1,14 @@
 import PlayOptionsSelection from "../PlayOptionsSelection"
 import Play from "../Play"
 import { useState } from 'react'
+import { useDispatch } from 'react-redux'
+import { increment } from '../../features/score'
 
 function PlayingField() {
     const [playerSelection, setPlayerSelection] = useState('')
     const [robotSelection, setRobotSelection] = useState('')
     const [outcome, setOutcome] = useState('')
+    const dispatch = useDispatch()
 
     const winConditions = {
         scissors: ['paper', 'lizard'],
@@ -33,6 +36,9 @@ function PlayingField() {
             } else {
                 localStorage.setItem('score', '1')
             }
+
+            dispatch(increment())
+
         } else {
             setOutcome('LOSE')
         }
