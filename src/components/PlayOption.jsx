@@ -15,11 +15,11 @@ function PlayOption({ option, sizeStyle = 'default' }) {
     }
 
     const borderColors = {
-        rock: 'bg-RockGradient shadow-[rgb(156,23,52)]',
-        scissors: 'bg-ScissorsGradient shadow-[rgb(190,110,38)]',
-        paper: 'bg-PaperGradient shadow-[rgb(44,69,189)]',
-        spock: 'bg-SpockGradient shadow-[rgb(45,144,171)]',
-        lizard: 'bg-LizardGradient shadow-[rgb(92,53,166)]'
+        rock: 'bg-RockGradient shadow-[rgb(156,23,52)] lg:shadow-[rgb(156,23,52)]',
+        scissors: 'bg-ScissorsGradient shadow-[rgb(190,110,38)] lg:shadow-[rgb(190,110,38)]',
+        paper: 'bg-PaperGradient shadow-[rgb(44,69,189)] lg:shadow-[rgb(44,69,189)]',
+        spock: 'bg-SpockGradient shadow-[rgb(45,144,171)] lg:shadow-[rgb(45,144,171)]',
+        lizard: 'bg-LizardGradient shadow-[rgb(92,53,166)] lg:shadow-[rgb(92,53,166)]'
     }
 
     return (
