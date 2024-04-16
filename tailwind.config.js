@@ -8,12 +8,6 @@ export default {
       fontFamily: {
         sans: ["Barlow Semi Condensed", 'sans-serif']
       },
-      // screens: {
-      //   'lg': '1366px',
-      // },
-      // maxWidth: {
-      //   'lg': '1366px',
-      // },
       colors: {
         'DarkText': 'hsl(229, 25%, 31%)',
         'ScoreText': 'hsl(229, 64%, 46%)',

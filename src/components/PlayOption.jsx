@@ -19,13 +19,18 @@ function PlayOption({ option, sizeStyle = 'default' }) {
         scissors: 'bg-ScissorsGradient shadow-[rgb(190,110,38)] lg:shadow-[rgb(190,110,38)]',
         paper: 'bg-PaperGradient shadow-[rgb(44,69,189)] lg:shadow-[rgb(44,69,189)]',
         spock: 'bg-SpockGradient shadow-[rgb(45,144,171)] lg:shadow-[rgb(45,144,171)]',
-        lizard: 'bg-LizardGradient shadow-[rgb(92,53,166)] lg:shadow-[rgb(92,53,166)]'
+        lizard: 'bg-LizardGradient shadow-[rgb(92,53,166)] lg:shadow-[rgb(92,53,166)]',
+        none: 'bg-DarkText'
     }
 
     return (
         <div className={`flex items-center justify-center rounded-full ${borderColors[option]} ${style[sizeStyle].outer}`}>
             <div className={`rounded-full flex items-center justify-center bg-white shadow-[inset_0_8px_5px_0px_rgba(0,0,0,0.25)] ${style[sizeStyle].inner}`} >
-                <img className="h-full w-full" src={`/images/play-options/${option}.svg`} />
+                {option ?
+                    <img className="h-full w-full" src={`/images/play-options/${option}.svg`} />
+                    :
+                    ''
+                }
             </div>
         </div>
     )
