@@ -8,10 +8,10 @@ function Play({ playerSelection, robotSelection, outcome, reset }) {
             <div className="flex w-full justify-between text-white text-md tracking-wider items-center">
                 <div className="flex flex-col items-center gap-5 tracking-widest lg:flex-col-reverse lg:text-2xl lg:gap-10">
                     <div id="player" className="relative">
-                        <div className="player-victor bg-white rounded-full h-[calc(100%+20px)] w-[calc(100%+20px)] lg:h-[calc(100%+65px)] lg:w-[calc(100%+65px)] absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 opacity-[0.04]" />
-                        <div className="player-victor bg-white rounded-full h-[calc(100%+40px)] w-[calc(100%+40px)] lg:h-[calc(100%+130px)] lg:w-[calc(100%+130px)] absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 opacity-[0.02]" />
-                        <div className="player-victor bg-white rounded-full h-[calc(100%+60px)] w-[calc(100%+60px)] lg:h-[calc(100%+195px)] lg:w-[calc(100%+195px)] absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 opacity-[0.01]" />
-                        <PlayOption sizeStyle="selected" option={playerSelection} />
+                        <div className="player-victor border-white border-[40px] lg:border-[65px] rounded-full h-[calc(100%+40px)] w-[calc(100%+40px)] lg:h-[calc(100%+65px)] lg:w-[calc(100%+65px)] absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-30 opacity-0 pointer-events-none" />
+                        <div className="player-victor border-white border-[80px] lg:border-[65px] rounded-full h-[calc(100%+80px)] w-[calc(100%+80px)] lg:h-[calc(100%+130px)] lg:w-[calc(100%+130px)] absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-20 opacity-0 pointer-events-none" />
+                        <div className="player-victor border-white border-[120px] lg:border-[65px] rounded-full h-[calc(100%+120px)] w-[calc(100%+120px)] lg:h-[calc(100%+195px)] lg:w-[calc(100%+195px)] absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 opacity-0 pointer-events-none" />
+                        <div className="z-50 relative"><PlayOption sizeStyle="selected" option={playerSelection} /></div>
                     </div>
                     <p>YOU PICKED</p>
                 </div>
@@ -24,10 +24,10 @@ function Play({ playerSelection, robotSelection, outcome, reset }) {
 
                 <div className="flex flex-col items-center gap-5 tracking-widest lg:flex-col-reverse lg:text-2xl lg:gap-10 ">
                     <div id="house" className="relative">
-                        <div className="house-victor bg-white rounded-full h-[calc(100%+20px)] w-[calc(100%+20px)] lg:h-[calc(100%+65px)] lg:w-[calc(100%+65px)]  absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 opacity-[0.04]" />
-                        <div className="house-victor bg-white rounded-full h-[calc(100%+40px)] w-[calc(100%+40px)] lg:h-[calc(100%+130px)] absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 opacity-[0.02]" />
-                        <div className="house-victor bg-white rounded-full h-[calc(100%+60px)] w-[calc(100%+60px)] lg:h-[calc(100%+195px)] absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 opacity-[0.01]" />
-                        <PlayOption sizeStyle="selected" option={robotSelection} />
+                        <div className="house-victor border-white border-[40px] lg:border-[65px] rounded-full h-[calc(100%+40px)] w-[calc(100%+40px)]  lg:h-[calc(100%+65px)] lg:w-[calc(100%+65px)]  absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 opacity-[0.04] z-30 opacity-0 pointer-events-none" />
+                        <div className="house-victor border-white border-[80px] lg:border-[130px] rounded-full h-[calc(100%+80px)] w-[calc(100%+80px)] lg:h-[calc(100%+130px)] lg:w-[calc(100%+130px)] absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 opacity-[0.02] z-20 opacity-0 pointer-events-none" />
+                        <div className="house-victor border-white border-[120px] lg:border-[195px] rounded-full h-[calc(100%+120px)] w-[calc(100%+120px)] lg:h-[calc(100%+195px)] lg:w-[calc(100%+195px)] absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 opacity-[0.01] z-10 opacity-0 pointer-events-none" />
+                        <div className="z-50 relative"><PlayOption sizeStyle="selected" option={robotSelection} /></div>
                     </div>
                     <p>THE HOUSE PICKED</p>
                 </div>

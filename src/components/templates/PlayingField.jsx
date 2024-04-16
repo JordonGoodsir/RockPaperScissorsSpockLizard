@@ -26,12 +26,15 @@ function PlayingField() {
 
 
         setTimeout(() => {
+            let tmpOutcome = ''
             setRobotSelection(robotChoice)
 
             if (selection === robotChoice) {
                 setOutcome('DRAW')
+                tmpOutcome = 'DRAW'
             } else if (winConditions[selection].includes(robotChoice)) {
                 setOutcome('WIN')
+                tmpOutcome = 'WIN'
 
                 const currentScore = localStorage.getItem('score')
 
@@ -45,23 +48,16 @@ function PlayingField() {
 
             } else {
                 setOutcome('LOSE')
+                tmpOutcome = 'LOSE'
             }
 
+            if (tmpOutcome !== 'DRAW') {
 
-            // TweenLite.to(element, 0.5, {css:{className:'+=newclass'}});
+                const victorDivs = gsap.utils.toArray(`.${tmpOutcome === 'WIN' ? 'player' : 'house'}-victor`);
 
-
-
-            if (outcome !== 'DRAW') {
-
-                const victorTL = gsap.timeline()
-
-                const victorDivs = gsap.utils.toArray(`.${outcome === 'WIN' ? 'player' : 'house'}-victor`);
-
-                victorDivs.forEach((element) => {
-                    victorTL.fromTo(element, { scale: 0 }, { opacity: 1, duration: 1 })
+                victorDivs.forEach((element, index) => {
+                    gsap.fromTo(element, { scale: 0 }, { scale: 1, opacity: (0.08 - (index * 0.020)), duration: 0.3, ease: "power4.out" })
                 })
-
             }
         }, 1000)
     }

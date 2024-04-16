@@ -10,10 +10,10 @@ function App() {
   return (
     <main className="h-screen w-screen overflow-hidden flex items-center justify-center bg-RadialGradient p-8 pb-16 select-none">
 
-      <div className='flex flex-col max-w-screen-lg w-full overflow-hidden h-full items-center'>
+      <div className='flex flex-col max-w-screen-lg w-full h-full items-center'>
         <div className='basis-auto w-full'><ScoreBoard /></div>
 
-        <div className="basis-auto w-full grow-1 shrink-1 overflow-hidden h-full flex items-center justify-center">
+        <div className="basis-auto w-full grow-1 shrink-1 h-full flex items-center justify-center">
           <PlayingField />
         </div>
 
