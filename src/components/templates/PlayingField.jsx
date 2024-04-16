@@ -63,6 +63,12 @@ function PlayingField() {
     }
 
     const resetPlay = () => {
+        const victorDivs = gsap.utils.toArray(`.${outcome === 'WIN' ? 'player' : 'house'}-victor`);
+        victorDivs.forEach((element) => {
+            gsap.set(element, { opacity: 0 })
+        })
+
+
         setPlayerSelection('')
         setRobotSelection('none')
         setOutcome('')
