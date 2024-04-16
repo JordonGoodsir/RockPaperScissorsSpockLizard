@@ -24,7 +24,7 @@ function PlayOptionsSelection({ select }) {
 
   return (
     <div className="flex flex-col relative w-[200px] lg:w-[350px]">
-      <img src="../../public/images/pentagon.svg" />
+      <img src="/images/pentagon.svg" />
       {Object.keys(optionStyles).map((option) => {
         return (
           <div onClick={() => select(option)} className={'cursor-pointer piece-option ' + optionStyles[option]} key={`${option}_selector`}><PlayOption option={option} /></div>
