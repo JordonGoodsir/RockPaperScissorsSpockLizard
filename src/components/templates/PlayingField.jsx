@@ -56,7 +56,7 @@ function PlayingField() {
                 const victorDivs = gsap.utils.toArray(`.${tmpOutcome === 'WIN' ? 'player' : 'house'}-victor`);
 
                 victorDivs.forEach((element, index) => {
-                    gsap.fromTo(element, { scale: 0 }, { scale: 1, opacity: (0.08 - (index * 0.020)), duration: 0.3, ease: "power4.out" })
+                    gsap.fromTo(element, { scale: 0, opacity: 0 }, { scale: 1, opacity: (0.08 - (index * 0.020)), duration: 0.3, ease: "power4.out" })
                 })
             }
         }, 1000)
