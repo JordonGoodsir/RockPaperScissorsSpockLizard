@@ -3,10 +3,11 @@ import Play from "../Play"
 import { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { increment } from '../../features/score'
+import { gsap } from "gsap";
 
 function PlayingField() {
     const [playerSelection, setPlayerSelection] = useState('')
-    const [robotSelection, setRobotSelection] = useState('')
+    const [robotSelection, setRobotSelection] = useState('none')
     const [outcome, setOutcome] = useState('')
     const dispatch = useDispatch()
 
@@ -22,31 +23,53 @@ function PlayingField() {
         setPlayerSelection(selection)
         const winConditionKeys = Object.keys(winConditions)
         const robotChoice = winConditionKeys[Math.floor(Math.random() * winConditionKeys.length)]
-        setRobotSelection(robotChoice)
 
-        if (selection === robotChoice) {
-            setOutcome('DRAW')
-        } else if (winConditions[selection].includes(robotChoice)) {
-            setOutcome('WIN')
 
-            const currentScore = localStorage.getItem('score')
+        setTimeout(() => {
+            setRobotSelection(robotChoice)
 
-            if (currentScore) {
-                localStorage.setItem('score', Number(currentScore) + 1)
+            if (selection === robotChoice) {
+                setOutcome('DRAW')
+            } else if (winConditions[selection].includes(robotChoice)) {
+                setOutcome('WIN')
+
+                const currentScore = localStorage.getItem('score')
+
+                if (currentScore) {
+                    localStorage.setItem('score', Number(currentScore) + 1)
+                } else {
+                    localStorage.setItem('score', '1')
+                }
+
+                dispatch(increment())
+
             } else {
-                localStorage.setItem('score', '1')
+                setOutcome('LOSE')
             }
 
-            dispatch(increment())
 
-        } else {
-            setOutcome('LOSE')
-        }
+            // TweenLite.to(element, 0.5, {css:{className:'+=newclass'}});
+
+
+
+            if (outcome !== 'DRAW') {
+
+                const victorTL = gsap.timeline()
+
+                const victorDivs = gsap.utils.toArray(`.${outcome === 'WIN' ? 'player' : 'house'}-victor`);
+
+                victorDivs.forEach((element) => {
+                    victorTL.fromTo(element, { scale: 0 }, { opacity: 1, duration: 1 })
+                })
+
+            }
+        }, 1000)
     }
 
     const resetPlay = () => {
         setPlayerSelection('')
-        setRobotSelection('')
+        setRobotSelection('none')
+        setOutcome('')
     }
 
 

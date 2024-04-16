@@ -20,16 +20,16 @@ function PlayOption({ option, sizeStyle = 'default' }) {
         paper: 'bg-PaperGradient shadow-[rgb(44,69,189)] lg:shadow-[rgb(44,69,189)]',
         spock: 'bg-SpockGradient shadow-[rgb(45,144,171)] lg:shadow-[rgb(45,144,171)]',
         lizard: 'bg-LizardGradient shadow-[rgb(92,53,166)] lg:shadow-[rgb(92,53,166)]',
-        none: 'bg-DarkText'
+        none: 'bg-DarkText shadow-[rgb(27,44,77)] lg:shadow-[rgb(27,44,77)]'
     }
 
     return (
         <div className={`flex items-center justify-center rounded-full ${borderColors[option]} ${style[sizeStyle].outer}`}>
-            <div className={`rounded-full flex items-center justify-center bg-white shadow-[inset_0_8px_5px_0px_rgba(0,0,0,0.25)] ${style[sizeStyle].inner}`} >
-                {option ?
-                    <img className="h-full w-full" src={`/images/play-options/${option}.svg`} />
-                    :
+            <div className={`rounded-full flex items-center justify-center shadow-[inset_0_8px_5px_0px_rgba(0,0,0,0.25)] ${style[sizeStyle].inner} ${option === 'none' || !option ? '' : 'bg-white'}`} >
+                {option === 'none' || !option ?
                     ''
+                    :
+                    <img className="h-full w-full" src={`/images/play-options/${option}.svg`} />
                 }
             </div>
         </div>
