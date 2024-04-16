@@ -51,7 +51,7 @@ function PlayingField() {
                 tmpOutcome = 'LOSE'
             }
 
-            if (tmpOutcome !== 'DRAW') {
+            if (tmpOutcome !== 'DRAW' && tmpOutcome) {
 
                 const victorDivs = gsap.utils.toArray(`.${tmpOutcome === 'WIN' ? 'player' : 'house'}-victor`);
 
